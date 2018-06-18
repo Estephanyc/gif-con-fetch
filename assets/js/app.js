@@ -8,6 +8,7 @@ inputText.addEventListener("keypress", (event)=>
   {
     let gif = inputText.value;
     inputText.value = "";
+    containerImage.innerHTML = "";
     fetch(`https://api.giphy.com/v1/gifs/search?api_key=PzBiUI6sCbqrLCFDOGArGWBCtfoauzYf&q=${gif}&limit=25&offset=0&rating=G&lang=en`)
     .then(response => response.json())
     .then(data => {
